@@ -1,3 +1,4 @@
+"use strict";
 //Java scrip Events 
 var email = document.getElementById("inputEmail");
 var password = document.getElementById("inputPassword");
