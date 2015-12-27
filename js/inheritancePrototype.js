@@ -1,3 +1,4 @@
+"use strict";
 	function userObject (){
 		this.fname = "Ankit Jain";
 		this.country  = "India";
