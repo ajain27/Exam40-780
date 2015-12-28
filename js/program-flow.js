@@ -3,7 +3,6 @@ var checklist = document.getElementById("checklist");
 
 var items = checklist.querySelectorAll("li");
 var inputs = checklist.querySelectorAll("input");
-console.log(items);
 
 try{
 	for (var i = 0; i < items.length; i++) {

@@ -20,3 +20,16 @@ I am learning XMLHttpRequest Stuff !!!
 			    </rule>
 			  </rules>
 		</rewrite>
+
+
+		            <rewrite>          
+        <rules>             
+            <rule name="RewriteHTML">
+              <match url="(.*)" />
+                <conditions logicalGrouping="MatchAll">                     
+                <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />                   
+                <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />              
+                </conditions><action type="Rewrite" url="{R:1}.html" />             
+            </rule>                
+        </rules>      
+    </rewrite>

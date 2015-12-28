@@ -52,8 +52,8 @@
 		}
 	}
 
-	n1 = new Player;
-	n2 = new Player;
+	var n1 = new Player;
+	var n2 = new Player;
 
 	// alert(n1.completeName("Ankit", "Jain"));
 
