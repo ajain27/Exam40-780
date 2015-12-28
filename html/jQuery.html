@@ -14,48 +14,46 @@
 				<div class="panel panel-default">
 						<div style="margin:30px;">
 							<h3>Add Friends</h3>
-							<label>Name </label><input type="text" class="form-control" style="width:300px;" data-id="name"> <br>
-							<label>Age </label><input type="text" class="form-control" style="width:300px;" data-id="age"> <br>
+							<label>Name </label><input type="text" class="form-control" style="width:300px;" id="name"> <br>
+							<label>Age </label><input type="text" class="form-control" style="width:300px;" id="age"> <br>
 							<button type="button" class="btn btn-primary" style="width:150px;" id="add">Add!</button>
 						</div>
 				</div>
 		</div>
 		<div class="col-md-8">
 			<div class="panel panel-default">
-					<!-- <h3>List Of Friends</h3> -->				
-					<ul style="margin-bottom:20px;">	
+					<ul style="margin-bottom:20px;" id="friends">	
 						<div class="panel panel-default friend">
 							<li>
-								<label style="margin-left:10px;"><strong>Name:</strong></label>
-								<span class="noedit">Ankit Jain</span>
-								<input type="text" class="edit name"/>
+								<form class="form-horizontal">
+									<div class="form-group">
+										<label style="margin-left:25px;"><strong>Name:</strong></label>
+										<span data-name="fname" class="noedit">Ankit Jain</span>
+										<input type="text" class="edit name"/>					
+									</div>
+
+									<div class="form-group">
+										<label style="margin-left:25px;"><strong>Age:</strong></label>
+										<span class="noedit" data-age="fage">29</span>
+										<input type="text" class="edit age"/><br>
+									</div>
+								</form>
+							
 								<br>
-								<label style="margin-left:10px;"><strong>Age:</strong></label>
-								<span class="noedit">29</span>
-								<input type="text" class="edit age"/><br>	
-								<button type="button" class="btn btn-warning" id="editData" style="margin:10px; width:200px;">Edit</button>
-								<button type="button" class="btn btn-danger" id="editData" style="margin:10px; width:200px;">Cancel</button>
-								<button type="button" class="btn btn-primary" id="editData" style="margin:10px; width:200px;">Save</button>
-								<span class="pull-right close closeX">X</span>
+
+								
+
+								<button type="button" class="btn btn-warning noedit jQuerybtns" id="editData">Edit</button>
+								<button type="button" class="btn btn-danger edit jQuerybtns" id="cancelData">Cancel</button>
+								<button type="button" class="btn btn-primary edit jQuerybtns" id="saveData">Save</button>
+								<span class="pull-right close remove" data-id="id">X</span>
 							</li>
 						</div>
 					</ul>
-
+				</div>
 			</div>
-		
 		</div>
-		
-		
-		</div>
-	
 	</div> <br>
-
-<!-- 	<div class="panel panel-default">
-		<div class="row" style="margin:10px;">
-		  <div class="col-md-4" style="border:groove">.col-md-4</div>
-		  <div class="col-md-8" style="border:groove">.col-md-8</div>
-		</div>
-	</div> -->
 
 
 </body>
