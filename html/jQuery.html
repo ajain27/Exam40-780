@@ -28,24 +28,40 @@
 								<form class="form-horizontal">
 									<div class="form-group">
 										<label style="margin-left:25px;"><strong>Name:</strong></label>
-										<span data-name="fname" class="noedit">Ankit Jain</span>
+										<span name="fname" class="noedit">Ankit Jain</span>
 										<input type="text" class="edit name"/>					
 									</div>
-
 									<div class="form-group">
 										<label style="margin-left:25px;"><strong>Age:</strong></label>
 										<span class="noedit" data-age="fage">29</span>
 										<input type="text" class="edit age"/><br>
 									</div>
-								</form>
-							
+								</form>							
 								<br>
-
-								
-
-								<button type="button" class="btn btn-warning noedit jQuerybtns" id="editData">Edit</button>
-								<button type="button" class="btn btn-danger edit jQuerybtns" id="cancelData">Cancel</button>
-								<button type="button" class="btn btn-primary edit jQuerybtns" id="saveData">Save</button>
+								<button type="button" class="btn btn-warning noedit jQuerybtns editData">Edit</button>
+								<button type="button" class="btn btn-danger edit jQuerybtns cancelData">Cancel</button>
+								<button type="button" class="btn btn-primary edit jQuerybtns saveData">Save</button>
+								<span class="pull-right close remove" data-id="id">X</span>
+							</li>
+						</div> <hr>
+						<div class="panel panel-default friend">
+							<li>
+								<form class="form-horizontal">
+									<div class="form-group">
+										<label style="margin-left:25px;"><strong>Name:</strong></label>
+										<span data-name="fname" class="noedit">Ankit Jain</span>
+										<input type="text" class="edit name"/>					
+									</div>
+									<div class="form-group">
+										<label style="margin-left:25px;"><strong>Age:</strong></label>
+										<span class="noedit" data-age="fage">29</span>
+										<input type="text" class="edit age"/><br>
+									</div>
+								</form>							
+								<br>
+								<button type="button" class="btn btn-warning noedit jQuerybtns editData">Edit</button>
+								<button type="button" class="btn btn-danger edit jQuerybtns cancelData">Cancel</button>
+								<button type="button" class="btn btn-primary edit jQuerybtns saveData">Save</button>
 								<span class="pull-right close remove" data-id="id">X</span>
 							</li>
 						</div>
@@ -55,6 +71,9 @@
 		</div>
 	</div> <br>
 
+	<ul>
+		<li></li>
+	</ul>
 
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

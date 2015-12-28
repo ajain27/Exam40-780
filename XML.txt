@@ -33,3 +33,21 @@ I am learning XMLHttpRequest Stuff !!!
             </rule>                
         </rules>      
     </rewrite>
+
+
+    Hi Will, I have a question which is actually my problem ... in your html file you are closing your ul tag before you even declare your li's . Usually what happens is this ---
+<ul>	<li></li></ul> . But in your html its 
+<ul>	</ul><li></li>...
+
+So now i am having an issue getting hold of the value of my span tag  which is something like this. 
+
+<ul  id="friends">	<li>
+<form class="form-horizontal">
+<div class="form-group">
+<label style="margin-left:25px;"><strong>Name:</strong></label>
+<span data-name="fname" class="noedit">Ankit Jain</span>										<input type="text" class="edit name"/>
+</div>
+<div class="form-group">
+<label style="margin-left:25px;"><strong>Age:</strong></label>									<span class="noedit" data-age="fage">29</span>										<input type="text" class="edit age"/><br>
+</div></form><br></li></ul>
+
