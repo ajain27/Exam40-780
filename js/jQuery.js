@@ -14,14 +14,15 @@ $(function (){
 	// })
 
 	$(".cancelData").on("click", function (){
-		console.log("Cancelling...");
 		$(this).closest('li').removeClass("edit");
 	})
 
 	$friends.delegate('.editData', 'click', function (){
 		$li = $(this).closest('li');
 		console.log($li);
-		$li.find("input.name").val( $li.find("span.name") ).html();
+		var some = $li.find("form div span.name").html();
+		console.log(some);
+		$li.find("input.name").val( $li.find("form div span.name") ).html();
 		$li.addClass("edit");
 	})
 })
