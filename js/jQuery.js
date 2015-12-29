@@ -5,14 +5,6 @@ $(function (){
 	$name = $("#name");
 	$age = $("#age");
 
-
-	// $("#editData").on("click", function (){
-	// 	$li = $(this).closest('li');
-	// 	console.log($li);
-	// 	$li.find("input.name").val( $li.find("span.name") ).html();
-	// 	$li.addClass("edit");
-	// })
-
 	$(".cancelData").on("click", function (){
 		$(this).closest('li').removeClass("edit");
 	})
@@ -20,9 +12,13 @@ $(function (){
 	$friends.delegate('.editData', 'click', function (){
 		$li = $(this).closest('li');
 		console.log($li);
-		var some = $li.find("form div span.name").html();
-		console.log(some);
-		$li.find("input.name").val( $li.find("form div span.name") ).html();
+		
+		$name = $li.find("form div span.name").html();
+		$li.find("input.name").val( $name ).html();
+
+		$age = $li.find("form div span.age").html();
+		$li.find("input.age").val( $age ).html();
+
 		$li.addClass("edit");
 	})
 })
