@@ -26,28 +26,30 @@
 		</div>
 		<div class="col-md-8">
 			<div class="panel panel-default">
-					<ul style="margin-bottom:20px;" id="friends">	
-						<div class="panel panel-default friend">
-							<li>
-								<form class="form-horizontal">
-									<div class="form-group">
-										<label style="margin-left:25px;"><strong>Name:</strong></label>
-										<span name="fname" class="name noedit">Ankit Jain</span>
-										<input type="text" class="edit name"/>					
-									</div>
-									<div class="form-group">
-										<label style="margin-left:25px;"><strong>Age:</strong></label>
-										<span class="age noedit" name="age">29</span>
-										<input type="text" class="edit age"/><br>
-									</div>
-								</form>							
-								<br>
-								<button type="button" class="btn btn-warning noedit jQueryEditbtn editData">Edit</button>
-								<button type="button" class="btn btn-danger edit jQueryCancelbtn cancelData">Cancel</button>
-								<button type="button" class="btn btn-primary edit jQuerySavebtn saveData">Save</button>
-								<span class="pull-right close remove" data-id="id">X</span>
-							</li>
-						</div> <hr>
+					<ul style="margin-bottom:20px;" id="friends">
+						<template id="friends-template">
+							<div class="panel panel-default friend">
+								<li>
+									<form class="form-horizontal">
+										<div class="form-group">
+											<label style="margin-left:25px;"><strong>Name:</strong></label>
+											<span name="fname" class="name noedit">{{Name}}</span>
+											<input type="text" class="edit name"/>					
+										</div>
+										<div class="form-group">
+											<label style="margin-left:25px;"><strong>Age:</strong></label>
+											<span class="age noedit" name="age">{{Age}}</span>
+											<input type="text" class="edit age"/><br>
+										</div>
+									</form>							
+									<br>
+									<button type="button" class="btn btn-warning noedit jQueryEditbtn editData">Edit</button>
+									<button type="button" class="btn btn-danger edit jQueryCancelbtn cancelData">Cancel</button>
+									<button type="button" class="btn btn-primary edit jQuerySavebtn saveData">Save</button>
+									<span class="pull-right close remove" data-id="id">X</span>
+								</li>
+							</div> <hr>
+						</template>		
 					</ul>
 				</div>
 			</div>
@@ -61,6 +63,7 @@
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script type="text/javascript" src="../js/jQuery.js" language="javascript"></script>  
+<script type="text/javascript" src="../js/mustache/mustache.js" language="javascript"></script>  
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" 
 	integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" 
 	crossorigin="anonymous"></script>

@@ -1,6 +1,11 @@
 $(function (){
 
-	$friends = $("#friends div li");
+
+	var friendsTemplate = $('#friends-template').html();
+	console.log(friendsTemplate);
+	
+	$friendList = $("#friends div li");
+
 	$name = $("#name");
 	$age = $("#age");
 
@@ -8,7 +13,7 @@ $(function (){
 		$(this).closest('li').removeClass("edit");
 	})
 
-	$friends.delegate('.editData', 'click', function (){
+	$friendList.delegate('.editData', 'click', function (){
 		$li = $(this).closest('li');
 
 		$name = $li.find("form div span.name").html();
@@ -25,7 +30,9 @@ $(function (){
 				type:'GET',
 				url:'/friends.json',
 				success:function (friends){
-					console.log(friends);					
+					$.each(friends, function  (i, friend){
+						$friendList.append(Mustache.render(friendsTemplate, friend));
+					})				
 				}, 
 				error:function (error){
 					console.log("Cannot load friends");

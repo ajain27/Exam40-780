@@ -1,13 +1,16 @@
 [
   {
+    "id": 1,
     "Name": "Mario",
     "Age": 32
   },
   {
+    "id": 2,
     "Name": "Peach",
     "Age": 21
   },
   {
+    "id": 3,
     "Name": "Bowser",
      "Age": 21
   }
