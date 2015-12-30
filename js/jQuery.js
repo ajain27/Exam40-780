@@ -1,7 +1,6 @@
 $(function (){
 
 	$friends = $("#friends div li");
-	console.log($friends);
 	$name = $("#name");
 	$age = $("#age");
 
@@ -11,8 +10,7 @@ $(function (){
 
 	$friends.delegate('.editData', 'click', function (){
 		$li = $(this).closest('li');
-		console.log($li);
-		
+
 		$name = $li.find("form div span.name").html();
 		$li.find("input.name").val( $name ).html();
 
@@ -21,5 +19,22 @@ $(function (){
 
 		$li.addClass("edit");
 	})
+
+	$('.saveData').on('click', function (argument){
+			$.ajax({
+				type:'GET',
+				url:'/friends.json',
+				success:function (friends){
+					console.log(friends);					
+				}, 
+				error:function (error){
+					console.log("Cannot load friends");
+				}				
+
+			});
+		
+	})
+
+
 })
 
