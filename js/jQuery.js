@@ -1,13 +1,28 @@
 $(function (){
 
-
-	var friendsTemplate = $('#friends-template').html();
-	console.log(friendsTemplate);
-	
-	$friendList = $("#friends div li");
+	$friendList = $("#myfriends div li");
+	console.log($friendList);
 
 	$name = $("#name");
 	$age = $("#age");
+
+
+	var friendsTemplate = $('#friends-Template').html();
+		// var friendsssss = $('#fff').html();
+
+		$.ajax({
+			type:'GET',
+			url:'/friends.json',
+			success:function (friends){
+				$.each(friends, function  (i, myfriend){
+					$friendList.append(Mustache.render(friendsTemplate, myfriend));
+				})				
+			}, 
+			error:function (error){
+				console.log("Cannot load friends");
+				}				
+
+			});
 
 	$(".cancelData").on("click", function (){
 		$(this).closest('li').removeClass("edit");
@@ -26,19 +41,7 @@ $(function (){
 	})
 
 	$('.saveData').on('click', function (argument){
-			$.ajax({
-				type:'GET',
-				url:'/friends.json',
-				success:function (friends){
-					$.each(friends, function  (i, friend){
-						$friendList.append(Mustache.render(friendsTemplate, friend));
-					})				
-				}, 
-				error:function (error){
-					console.log("Cannot load friends");
-				}				
-
-			});
+		console.log("This is save");
 		
 	})
 
