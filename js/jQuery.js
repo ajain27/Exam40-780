@@ -23,9 +23,8 @@ $(function (){
 		});
 
 
-	$(".cancelData").on("click", function (){
-		// $(this).closest('li').removeClass("edit");
-		console.log("This is Cancel...");
+	$friendList.delegate(".cancelData", "click", function (){
+		$(this).closest('li').removeClass("edit");
 	})
 
 	$friendList.delegate('.editData', 'click', function (){
