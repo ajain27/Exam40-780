@@ -133,10 +133,13 @@ circle {
 .friend li .edit {
 	border-radius: 3px;
 	display: none;
+	margin: 5px;
 }
 
 .friend li.edit .edit {
 	display: initial;
+	padding: 5px;
+	font-family: cursive;
 }
 
 .friend li.edit .noedit {
