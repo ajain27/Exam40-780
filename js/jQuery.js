@@ -1,31 +1,31 @@
 $(function (){
 
-	$friendList = $("#myfriends div li");
+	$friendList = $("#myfriends");
 	console.log($friendList);
 
 	$name = $("#name");
 	$age = $("#age");
 
 
-	var friendsTemplate = $('#friends-Template').html();
-		// var friendsssss = $('#fff').html();
+	var friendsTemplate = $('#friends-template').html();
+	$.ajax({
+		type:'GET',
+		url:'/friends.json',
+		success:function (friends){
+			$.each(friends, function  (i, myfriend){
+				$friendList.append(Mustache.render(friendsTemplate, myfriend));
+			})				
+		}, 
+		error:function (error){
+			console.log("Cannot load friends");
+			}				
 
-		$.ajax({
-			type:'GET',
-			url:'/friends.json',
-			success:function (friends){
-				$.each(friends, function  (i, myfriend){
-					$friendList.append(Mustache.render(friendsTemplate, myfriend));
-				})				
-			}, 
-			error:function (error){
-				console.log("Cannot load friends");
-				}				
+		});
 
-			});
 
 	$(".cancelData").on("click", function (){
-		$(this).closest('li').removeClass("edit");
+		// $(this).closest('li').removeClass("edit");
+		console.log("This is Cancel...");
 	})
 
 	$friendList.delegate('.editData', 'click', function (){

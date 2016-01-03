@@ -1,17 +1,17 @@
 [
   {
     "id": 1,
-    "Name": "Mario",
-    "Age": 32
+    "name": "Johnny Sins",
+    "age": 32
   },
   {
     "id": 2,
-    "Name": "Peach",
-    "Age": 21
+    "name": "James Deen",
+    "age": 35
   },
   {
     "id": 3,
-    "Name": "Bowser",
-     "Age": 21
+    "name": "Nacho Vidal",
+     "age": 45
   }
 ] 
