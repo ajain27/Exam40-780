@@ -1,8 +1,6 @@
 $(function (){
 
 	$friendList = $("#myfriends");
-	console.log($friendList);
-
 	$name = $("#name");
 	$age = $("#age");
 
@@ -39,8 +37,20 @@ $(function (){
 		$li.addClass("edit");
 	})
 
-	$('.saveData').on('click', function (argument){
-		console.log("This is save");
+	$('.addfreindbtn').on('click', function (argument){
+		var friend = {
+			name: $name.val(),
+			age: $age.val()
+		}
+
+		$.ajax({
+			type: "POST",
+			url: '/friends.json',
+			data:friend,
+			success:function (newFriend){
+				console.log(friend);
+			}
+		})
 		
 	})
 
