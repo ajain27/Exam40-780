@@ -4,6 +4,8 @@ $(function (){
 	$name = $("#name");
 	$age = $("#age");
 
+	$remove = $friendList.delegate('.remove').val()
+	console.log($remove);
 
 	var friendsTemplate = $('#friends-template').html();
 	$.ajax({
@@ -52,6 +54,16 @@ $(function (){
 			}
 		})
 		
+	});
+
+	$friendList.delegate('.remove', 'click', function (argument){
+		// console.log($(this).attr('data-id'));
+		console.log("Removing...", $remove);
+
+		$.ajax({
+			type:"DELETE",
+			url:'/friends.json' + $remove,
+		});
 	})
 
 
