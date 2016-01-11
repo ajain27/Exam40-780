@@ -31,10 +31,10 @@ $(function (){
 		$li = $(this).closest('li');
 
 		$name = $li.find("form div span.name").html();
-		$li.find("input.name").val( $name ).html();
+		$li.find("input.myName").val( $name ).html();
 
 		$age = $li.find("form div span.age").html();
-		$li.find("input.age").val( $age ).html();
+		$li.find("input.myAge").val( $age ).html();
 
 		$li.addClass("edit");
 	})
@@ -65,7 +65,6 @@ $(function (){
 			url:'/friends.json' + $remove,
 		});
 	})
-
 
 })
 
