@@ -123,13 +123,14 @@ circle {
     margin-left: -20px;
     background: #f5f5f5;
     box-shadow: 0px 5px 20px -5px;
+    height: 185px;
 }
 
-.remove {
+/*.remove {
 	position: relative;
     top: -100px;
     right: 5px;
-}
+}*/
 .friend li .edit {
 	border-radius: 3px;
 	display: none;
@@ -148,6 +149,10 @@ circle {
 
 .friend li .edit .noedit {
 	display: none;
+}
+
+.friend-image {
+	 box-shadow: 0px 2px 10px 0px;
 }
 
 .jQueryEditbtn {
@@ -170,7 +175,7 @@ circle {
 	margin:10px; width:200px;
 }
 .jQuerySavebtn:hover {
-	color: #286090 !important;
+	color: #449d44 !important;
 	background: white !important;
 	font-weight: bold;
 }

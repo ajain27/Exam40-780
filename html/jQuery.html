@@ -30,12 +30,10 @@
 								<h3 class="addFriends">Add Friends</h3>
 							</div>
 							<form METHOD="POST" accept-charset="utf-8">							
-								<label>Name </label><input type="text" class="form-control" style="width:300px;" id="name"> <br>
-								<label>Age </label><input type="text" class="form-control" style="width:300px;" id="age"> <br>
+								<label>Name </label><input type="text" class="form-control" id="name"> <br>
+								<label>Age </label><input type="text" class="form-control" id="age"> <br>
 								<button type="button" class="btn btn-primary addfreindbtn" id="add">Add!</button>
 							</form>	
-							
-
 						</div>
 					</div>						
 				</div>
@@ -46,23 +44,35 @@
 						<template id="friends-template" class="template">
 							<div class="panel panel-default friend">
 								<li class="list">
-									<form class="form-horizontal">
-										<div class="form-group">
-											<label style="margin-left:25px;"><strong>Name:</strong></label>
-											<span name="fname" class="name noedit">{{name}}</span>
-											<input type="text" class="edit myName"/>					
+									<div class="row">
+										<div class="col-md-7">
+											<form class="form-horizontal">
+												<div class="form-group">
+													<label style="margin-left:25px;"><strong>Name:</strong></label>
+													<span name="fname" class="name noedit">{{name}}</span>
+													<input type="text" class="edit myName"/>	
+												</div>
+												<div class="form-group">
+													<label style="margin-left:25px;"><strong>Age:</strong></label>
+													<span class="age noedit" name="fage">{{age}}</span>
+													<input type="text" class="edit myAge"/><br>
+												</div>										
+										</form>	
+											<div style="display:inline-flex">
+												<button type="button" class="btn btn-warning noedit jQueryEditbtn editData">Edit</button>
+												<button type="button" class="btn btn-danger edit jQueryCancelbtn cancelData">Cancel</button>
+												<button type="button" class="btn btn-success edit jQuerySavebtn saveData">Save</button>
+												<button type="button" class="btn btn-danger noedit jQueryCancelbtn deleteData" data-id={{id}}>Delete</button>
+											</div>									
 										</div>
-										<div class="form-group">
-											<label style="margin-left:25px;"><strong>Age:</strong></label>
-											<span class="age noedit" name="fage">{{age}}</span>
-											<input type="text" class="edit myAge"/><br>
+										<div class="col-md-5" style="border-left:2px ridge white; margin-top:15px;">
+											<div class="pull-left friend-image">
+												<img src="../images/user-icon.jpg" alt="Food" height="150" width="150">
+											</div>											
 										</div>
-									</form>							
-									<br>
-									<button type="button" class="btn btn-warning noedit jQueryEditbtn editData">Edit</button>
-									<button type="button" class="btn btn-danger edit jQueryCancelbtn cancelData">Cancel</button>
-									<button type="button" class="btn btn-primary edit jQuerySavebtn saveData">Save</button>
-									<span class="pull-right close remove" data-id={{id}}>X</span>
+									</div>														
+									<!-- <br> -->
+								
 								</li>
 							</div> <hr>
 						</template>
