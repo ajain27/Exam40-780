@@ -67,6 +67,7 @@ circle {
 	/*-webkit-transform: rotateX(150deg);*/
 	transition: width 2s, height 2s, transform 2s;
 	transition-timing-function: ease-in;
+	margin: 10px;
 }
 
 #imageDisplay:hover { 
