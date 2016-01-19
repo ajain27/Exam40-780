@@ -10,7 +10,7 @@ $(function (){
 	var friendsTemplate = $('#friends-template').html();
 	$.ajax({
 		type:'GET',
-		url:'/friends.json',
+		url:window.location.origin + '/friends.json',
 		success:function (friends){
 			$.each(friends, function  (i, myfriend){
 				$friendList.append(Mustache.render(friendsTemplate, myfriend));
@@ -47,7 +47,7 @@ $(function (){
 
 		$.ajax({
 			type: "POST",
-			url: '/friends.json',
+			url: window.location.origin + '/friends.json',
 			data:friend,
 			success:function (newFriend){
 				console.log(friend);
