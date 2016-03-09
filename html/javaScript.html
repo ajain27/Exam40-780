@@ -22,17 +22,30 @@
       </section>
       <div class="container">
         <div class="panel panel-default" style="border:none">
-         <span class="">1. Write a JavaScript program to display the current day and time in the following format</span><br>
+         <span>1. Write a JavaScript program to display the current day and time in the following format</span><br>
           <span>Sample Output : Today is : Friday. </span><br>
           <span>Current time is : 4 PM : 50 : 22</span> <br>
           <button type="button" class="btn btn-info" onclick="todayDate()">Get Today's Date</button> <br>
           <span id="date"></span><br>
           <span id="time"></span>
-        </div>
+        </div> <br>
+
+        <div class="panel panel-default" style="border:none" >
+          <span>2. Write a JavaScript program to print the contents of the current window.</span><br>
+          <button type="button" class="btn btn-info" onclick="printThis()">Print</button> <br>
+        </div> <br>
+
+
+        <div class="panel panel-default" style="border:none" >
+          <span>3. Write a JavaScript program to get the current date</span><br>
+          <span>Expected Output : mm-dd-yyyy, mm/dd/yyyy or dd-mm-yyyy, dd/mm/yyyy </span><br>
+          <button type="button" class="btn btn-info" onclick="getDate()">Get Date</button> <br>
+        <span id="getDate"></span>          
+        </div> <br>
       </div>
   </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script type="text/javascript" src="../js/date.js" language="javascript"></script>
+  <script type="text/javascript" src="../js/basics.js" language="javascript"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" 
   integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" 
   crossorigin="anonymous"></script>
