@@ -39,3 +39,13 @@ function getDate () {
 
 	 document.getElementById("getDate").innerHTML = "Today is " +  m +  "-" + d +  "-" + year ;
 }
+
+function getArea() {
+	var side1 = 5;   
+	var side2 = 6;   
+	var side3 = 7;   
+	var perimeter = (side1 + side2 + side3)/2;  
+	var area =  Math.sqrt(perimeter*((perimeter-side1)*(perimeter-side2)*(perimeter-side3)));  
+	 document.getElementById("getArea").innerHTML = "Area is " + " " + area ;
+	
+}
