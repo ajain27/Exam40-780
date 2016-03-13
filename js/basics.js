@@ -8,7 +8,7 @@ function todayDate () {
 	 	hoursIn12 = hours - 12;
 	 	morEve = "PM";
 	 } else if(hoursIn12 = 12){
-	 	// hoursIn12 == "00 AM"
+	 	hoursIn12 == "00 AM"
 	 }
 	 var minutes = today.getMinutes();
 	 var seconds = today.getSeconds();
@@ -16,6 +16,10 @@ function todayDate () {
 	 document.getElementById("date").innerHTML = "Today is " +  weekDay[day] + " . ";
 	 document.getElementById("time").innerHTML = "Current time is " +  hoursIn12 +  " " + morEve +  " " + ":" +  " " + minutes + ":" +  " " +seconds;
 
+}
+function childTodayDate () {
+	this.fName = "Ankit";
+	this.lName = "Jain";
 }
 
 function printThis () {
